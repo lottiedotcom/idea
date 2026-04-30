@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persocom Initialization</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <div class="header">
+            <h1>Persocom Registry</h1>
+            <p>Enter your initialization parameters to generate your unit ID.</p>
+        </div>
+
+        <div class="form-group">
+            <label for="p-name">Unit Designation (Name):</label>
+            <input type="text" id="p-name" placeholder="e.g., Chi, Sumomo, Kotoko" required>
+            
+            <label for="p-color">Aura / Primary Hue:</label>
+            <input type="color" id="p-color" value="#ffb6c1">
+            
+            <label for="p-keywords">Data Parameters (Hobbies/Likes separated by commas):</label>
+            <input type="text" id="p-keywords" placeholder="e.g., reading, baking, observing" required>
+            
+            <button id="generate-btn">Initialize Persocom</button>
+        </div>
+
+        <div id="id-card-container" class="hidden">
+            <div id="id-card">
+                <div class="card-header">
+                    <h2>CERTIFICATE OF REGISTRATION</h2>
+                    <span class="barcode">||| ||||| |||| || |||</span>
+                </div>
+                <div class="card-body">
+                    <div class="avatar-placeholder" id="avatar-bg">
+                        <span id="avatar-initial">?</span>
+                    </div>
+                    <div class="details">
+                        <p><strong>DESIGNATION:</strong> <span id="out-name"></span></p>
+                        <p><strong>SERIAL NO:</strong> <span id="out-serial"></span></p>
+                        <p><strong>MODEL TYPE:</strong> <span id="out-type"></span></p>
+                        <p><strong>OS KERNEL:</strong> <span id="out-os"></span></p>
+                        <p><strong>PRIMARY FUNCTION:</strong> <span id="out-function"></span></p>
+                        <p><strong>MANUFACTURER:</strong> <span id="out-manufacturer"></span></p>
+                    </div>
+                </div>
+                <div class="card-footer" id="card-footer">
+                    * Authorized for personal use only. Protect data port connection. *
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
